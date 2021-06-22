@@ -10,6 +10,11 @@ This repository is a small [monorepo](https://en.wikipedia.org/wiki/Monorepo) wi
 2. Some builds require that some steps only be executed when there is a commit to a specific branch. Details are included in the associated language project folders.
 3. Care should be taken to make sure project builds are isolated from each other.
 
+## Deliverables
+
+1. A publicly accessible link to the git repository (e.g. GitHub, Bitbucket, etc.)
+2. A publicly accessible link to the output of your build pipeline
+
 ## Helpful Tips
 
 1. Assume that all builds should be run on a *nix like operating system
