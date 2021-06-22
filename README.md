@@ -5,8 +5,8 @@ This repository is a small [monorepo](https://en.wikipedia.org/wiki/Monorepo) wi
 ## Instructions
 
 1. Configure a build system of your choice to build projects from **exactly two** of the available languages in this repository.
-  * Builds should run automatically on commit.
-  * Individual projects should only be built if there have been changes within the project. e.g. If you chose to build the python and go projects then the go build should either not run or stop immediately after starting when changes to the python project are committed.
+    * Builds should run automatically on commit.
+    * Individual projects should only be built if there have been changes within the project. e.g. If you chose to build the python and go projects then the go build should either not run or stop immediately after starting when changes to the python project are committed.
 2. Some builds require that some steps only be executed when there is a commit to a specific branch. Details are included in the associated language project folders.
 3. Care should be taken to make sure project builds are isolated from each other.
 
@@ -14,10 +14,10 @@ This repository is a small [monorepo](https://en.wikipedia.org/wiki/Monorepo) wi
 
 1. Assume that the underlying version control system is git
 2. Each language folder contains a `Makefile` with the same 4 make targets that should be run in the following order
-  1. `deps` - Install dependencies
-  2. `test` - Run unit tests
-  3. `build` - Produce an artefact
-  4. `publish` - Simulate publishing a successfully built artefact to a package repository. **This target should not be run on any git branch other than master i.e. only run this target when building the master branch**
+    1. `deps` - Install dependencies
+    2. `test` - Run unit tests
+    3. `build` - Produce an artefact
+    4. `publish` - Simulate publishing a successfully built artefact to a package repository. **This target should not be run on any git branch other than master i.e. only run this target when building the master branch**
 3. The README.md file in each language folder contains more detailed instructions for the various make targets and how to run them with the `make` command
 
 ## Free Build Services
