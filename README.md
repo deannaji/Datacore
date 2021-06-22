@@ -28,3 +28,4 @@ Please use which ever build system you are the most comfortable with, we want to
 * [CircleCI](https://circleci.com/)
 * [Travis CI](https://www.travis-ci.com/)
 * [GitHub Actions](https://github.com/features/actions)
+* [Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines)
