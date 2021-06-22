@@ -12,13 +12,14 @@ This repository is a small [monorepo](https://en.wikipedia.org/wiki/Monorepo) wi
 
 ## Helpful Tips
 
-1. Assume that the underlying version control system is git
-2. Each language folder contains a `Makefile` with the same 4 make targets that should be run in the following order
+1. Assume that all builds should be run on a *nix like operating system
+2. Assume that the underlying version control system is git
+3. Each language folder contains a `Makefile` with the same 4 make targets that should be run in the following order
     1. `deps` - Install dependencies
     2. `test` - Run unit tests
     3. `build` - Produce an artefact
     4. `publish` - Simulate publishing a successfully built artefact to a package repository. **This target should not be run on any git branch other than master i.e. only run this target when building the master branch**
-3. The README.md file in each language folder contains more detailed instructions for the various make targets and how to run them with the `make` command
+4. The README.md file in each language folder contains more detailed instructions for the various make targets and how to run them with the `make` command
 
 ## Free Build Services
 
