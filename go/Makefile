@@ -1,4 +1,4 @@
-.PHONY: deps test build
+.PHONY: deps test build publish
 
 all: deps test build
 
