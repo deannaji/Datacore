@@ -14,7 +14,7 @@ test:
 ifneq ($(PYTHON_VERSION_ACTUAL),$(PYTHON_VERSION_EXPECTED))
 	$(error "Incorrect python version, expected ${PYTHON_VERSION_EXPECTED} but found ${PYTHON_VERSION_ACTUAL}")
 else
-	nose2 -v --with-coverage --coverage takehome --coverage-report term-missing --coverage-report html tests 2>&1 | tee ./output/python-test.out
+	pipenv run nose2 -v --with-coverage --coverage takehome --coverage-report term-missing --coverage-report html tests 2>&1 | tee ./output/python-test.out
 	tar czvf ./output/python-coverage.tar.gz .coverage ./htmlcov
 endif
 
