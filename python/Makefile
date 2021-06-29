@@ -16,4 +16,8 @@ build:
 	# tar czvf ./output/python-artefact.tar.gz ./takehome
 
 publish:
-	if [[ "$(git branch --show-current)" -ne "master" ]]; then exit 1; fi
+ifneq ($(shell git branch --show-current),master)
+	$(error "Publish should only be run on master")
+else
+	echo "Published successfully"
+endif
