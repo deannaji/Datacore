@@ -7,7 +7,9 @@ This repository is a small [monorepo](https://en.wikipedia.org/wiki/Monorepo) wi
 1. Configure a build system for a go and a python project.
     * Builds should run automatically on commit.
     * For project sub-folders, we expect a build only when there have been changes made to the sub-folder since the previous build run. e.g. When there is a commit to only the python project, then a Go build should not be triggered. Similarly, a commit made to both the Go and Python projects should build both.
-2. Some builds require that some steps only be executed when there is a commit to a specific branch. Details are included in the associated language project folders.
+2. Some builds require that some steps only be executed when there is a commit to a specific branch.
+    * `deps`, `test`, and `build` should be run on every branch when there is a commit.
+    * `publish` should only be run when there is a commit to master.
 3. Care should be taken to make sure project builds are isolated from each other.
 
 ## Deliverables
@@ -23,7 +25,7 @@ This repository is a small [monorepo](https://en.wikipedia.org/wiki/Monorepo) wi
     1. `deps` - Install dependencies
     2. `test` - Run unit tests
     3. `build` - Produce an artefact
-    4. `publish` - Simulate publishing a successfully built artefact to a package repository. **This target should not be run on any git branch other than master i.e. only run this target when building the master branch**
+    4. `publish` - Simulate publishing a successfully built artefact to a package repository.
 4. The README.md file in each language folder contains more detailed instructions for the various make targets and how to run them with the `make` command
 
 ## Free Build Services
