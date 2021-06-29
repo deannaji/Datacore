@@ -20,7 +20,6 @@ endif
 
 build:
 	python3 setup.py sdist --dist-dir ./output bdist_wheel
-	# tar czvf ./output/python-artefact.tar.gz ./takehome
 
 publish:
 ifneq ($(shell git branch --show-current),master)
