@@ -1,6 +1,6 @@
 .PHONY: deps test build publish
 
-PYTHON_VERSION_EXPCETED = Python 3.7.7
+PYTHON_VERSION_EXPECTED = Python 3.7.7
 PYTHON_VERSION_ACTUAL = $(shell python3 --version)
 
 all: deps test build
@@ -11,8 +11,8 @@ deps:
 	pipenv install
 
 test:
-ifneq ($(PYTHON_VERSION_ACTUAL),$(PYTHON_VERSION_EXPCETED))
-	$(error "Incorrect python version, expected ${PYTHON_VERSION_EXPCETED} but found ${PYTHON_VERSION_ACTUAL}")
+ifneq ($(PYTHON_VERSION_ACTUAL),$(PYTHON_VERSION_EXPECTED))
+	$(error "Incorrect python version, expected ${PYTHON_VERSION_EXPECTED} but found ${PYTHON_VERSION_ACTUAL}")
 else
 	nose2 -v --with-coverage --coverage takehome --coverage-report term-missing --coverage-report html tests 2>&1 | tee ./output/python-test.out
 	tar czvf ./output/python-coverage.tar.gz .coverage ./htmlcov
