@@ -22,7 +22,7 @@ build:
 	python3 setup.py sdist --dist-dir ./output bdist_wheel
 
 publish:
-ifneq ($(shell git branch --show-current),master)
+ifneq ($(shell git rev-parse --abbrev-ref HEAD),master)
 	$(error "Publish should only be run on master")
 else
 	echo "Published successfully"

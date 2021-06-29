@@ -19,7 +19,7 @@ build:
 	go build -o ./output/golang-artefact ./cmd/takehome
 
 publish:
-ifneq ($(shell git branch --show-current),master)
+ifneq ($(shell git rev-parse --abbrev-ref HEAD),master)
 	$(error "Publish should only be run on master")
 else
 	echo "Published successfully"
