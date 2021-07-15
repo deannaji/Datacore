@@ -1,6 +1,6 @@
 # Golang Project
 
-This project should be run using golang version 1.15.6
+This project should be run using golang version 1.15.7
 
 ## Install Dependencies
 
@@ -12,7 +12,7 @@ This project should be run using golang version 1.15.6
 
 ### Outputs
 
-The following outputs should be preserved by the build pipeline:
+The following outputs should be preserved by the test pipeline:
 
 * ./output/golang-test.out
 * ./output/golang-coverage.out

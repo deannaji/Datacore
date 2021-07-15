@@ -1,4 +1,4 @@
-# Golang Project
+# Python Project
 
 This project should be run using python version 3.7.7
 
@@ -12,9 +12,9 @@ This project should be run using python version 3.7.7
 
 ### Outputs
 
-The following outputs should be preserved by the build pipeline:
+The following outputs should be preserved by the test pipeline:
 
-* ./output/python-test.out
+* ./output/python-test.xml
 * ./output/python-coverage.tar.gz
 
 ## Building the Artefact
