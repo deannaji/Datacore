@@ -1,12 +1,12 @@
 # Datacore Take Home Assignment
 
-This repository is a small [monorepo](https://en.wikipedia.org/wiki/Monorepo) with two projects in two different languages.
+This repository is a small [monorepo](https://en.wikipedia.org/wiki/Monorepo) with several projects in multiple languages.
 
 ## Instructions
 
-1. Configure a build system for a go and a python project.
+1. Configure a build system of your choice to build projects from **exactly two** of the available languages in this repository.
     * Builds should run automatically on commit.
-    * For project sub-folders, we expect a build only when there have been changes made to the sub-folder since the previous build run. e.g. When there is a commit to only the python project, then a Go build should not be triggered. Similarly, a commit made to both the Go and Python projects should build both.
+    * For project sub-folders, we expect a build only when there have been changes made to the sub-folder since the previous build run. e.g. When there is a commit to only the Python project, then a Go build should not be triggered. Similarly, a commit made to both the Go and Python projects should build both.
 2. Some builds require that some steps only be executed when there is a commit to a specific branch.
     * `deps`, `test`, and `build` should be run on every branch when there is a commit.
     * `publish` should only be run when there is a commit to master.
