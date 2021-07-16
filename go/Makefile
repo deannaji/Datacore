@@ -12,7 +12,7 @@ test:
 ifeq (,$(findstring $(GOLANG_VERSION_EXPECTED),$(GOLANG_VERSION_ACTUAL)))
 	$(error "Incorrect golang version, expected ${GOLANG_VERSION_EXPECTED} but found ${GOLANG_VERSION_ACTUAL}")
 else
-	go test -count=1 -coverprofile=./output/golang-coverage.out ./... | tee ./output/golang-test.out
+	go test -count=1 -coverprofile=./output/golang-coverage.out ./...
 endif
 
 build:

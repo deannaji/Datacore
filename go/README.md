@@ -14,7 +14,6 @@ This project should be run using golang version 1.15.7
 
 The following outputs should be preserved by the test pipeline:
 
-* ./output/golang-test.out
 * ./output/golang-coverage.out
 
 ## Building the Artefact
