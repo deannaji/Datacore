@@ -15,18 +15,20 @@ This repository is a small [monorepo](https://en.wikipedia.org/wiki/Monorepo) wi
 ## Deliverables
 
 1. A publicly accessible link to the git repository (e.g. GitHub, Bitbucket, etc.)
-2. A publicly accessible link to the output of your build pipeline
+    * **Privacy note**: if you fork this repo, other candidates can see your account.  If this is undesirable, then copy this to a new repo instead or use a new GitHub account.
+3. A publicly accessible link to the output of your build pipeline
 
 ## Helpful Tips
 
 1. Assume that all builds should be run on a *nix like operating system
 2. Assume that the underlying version control system is git
-3. Each language folder contains a `Makefile` with the same 4 make targets that should be run in the following order
+3. Assume that each sub-folder project is independent and has no cross-dependencies
+4. Each language folder contains a `Makefile` with the same 4 make targets that should be run in the following order
     1. `deps` - Install dependencies
     2. `test` - Run unit tests
-    3. `build` - Produce an artefact
-    4. `publish` - Simulate publishing a successfully built artefact to a package repository.
-4. The README.md file in each language folder contains more detailed instructions for the various make targets and how to run them with the `make` command
+    3. `build` - Produce an artifact
+    4. `publish` - Simulate publishing a successfully built artifact to a package repository.
+5. The README.md file in each language folder contains more detailed instructions for the various make targets and how to run them with the `make` command
 
 ## Free Build Services
 
@@ -36,3 +38,4 @@ Please use which ever build system you are the most comfortable with, we want to
 * [Travis CI](https://www.travis-ci.com/)
 * [GitHub Actions](https://github.com/features/actions)
 * [Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines)
+* [Gitlab CI](https://about.gitlab.com/)
