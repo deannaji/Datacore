@@ -1,0 +1,38 @@
+name: Datacore pipeline
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+      
+      - name: Check out repository code
+        id: step_one
+        uses: actions/checkout@v2
+      
+      ## Getting which repo got changed: 
+      - name: Detect Change
+        run: echo "WORKING_DIRECTORY = $(git diff --dirstat=files,0 HEAD~1 | sed 's/^[ 0-9.]\+% //g')" >> $GITHUB_ENV
+
+      ## Building starts:      
+      - name: Install Dependencies
+        id: step_two   
+        run: make deps 
+        working-directory: env.WORKING_DIRECTORY
+
+      - name: Test
+        id: step_three
+        run: make test >> $GITHUB_ENV
+        working-directory: env.WORKING_DIRECTORY
+      
+      - name: Build
+        id: step_four
+        run: make build >> $GITHUB_ENV
+        working-directory: env.WORKING_DIRECTORY
+      
+      - name: Publish
+        id: step_five
+        run: make publish
+        working-directory: env.WORKING_DIRECTORY
+
+      - run: echo "This job's status is ${{ job.status }}."
